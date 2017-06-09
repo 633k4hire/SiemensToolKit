@@ -11,6 +11,21 @@
     <AssemblyName>SiemensToolKit</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,7 +46,29 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpFocasLibrary">
+      <HintPath>..\..\..\..\..\OneDrive\SharpFocasLibrary\SharpFocasLibrary\bin\x86\Release\SharpFocasLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,14 +81,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\DiagnosticModule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\doubleBufferedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\S7Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VcPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="OperationsAnalyzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationsAnalyzer.Designer.cs">
+      <DependentUpon>OperationsAnalyzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisForms\createComponentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisForms\createComponentForm.designer.cs" />
+    <Compile Include="VisForms\createSymbolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisForms\createSymbolForm.Designer.cs">
+      <DependentUpon>createSymbolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisForms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisForms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisForms\Visualizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisForms\Visualizer.designer.cs">
+      <DependentUpon>Visualizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="License.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializeClasses.cs" />
+    <Compile Include="Sharp7.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisForms\createSymbolForm.resx">
+      <DependentUpon>createSymbolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisForms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisForms\Visualizer.resx">
+      <DependentUpon>Visualizer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,7 +156,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -70,6 +168,65 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45_Menu-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analyze1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analyze2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner_Electricity_Meters.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-access-bannerv2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOD_email_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machine-learning-banner1-705x200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Machine-Learning-in-the-Workplace_Blog-Banner-Image_1200x734px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visual.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vertical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Play-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

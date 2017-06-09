@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="analyze1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\analyze1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="analyze2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\analyze2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vertical.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_45_Menu_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\45_Menu-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="visual" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\visual.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Import" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HOD_email_banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HOD_email_banner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="analytics" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\analytics.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banner_Electricity_Meters" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner_Electricity_Meters.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="data_access_bannerv2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\data-access-bannerv2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Machine_Learning_in_the_Workplace_Blog_Banner_Image_1200x734px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Machine-Learning-in-the-Workplace_Blog-Banner-Image_1200x734px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="machine_learning_banner1_705x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\machine-learning-banner1-705x200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Button-Play-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button-Play-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
